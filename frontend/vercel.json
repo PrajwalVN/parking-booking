@@ -2,5 +2,11 @@
   "buildCommand": "npx vite build",
   "outputDirectory": "dist",
   "framework": null,
-  "installCommand": "npm install && chmod +x node_modules/.bin/*"
+  "installCommand": "npm install && chmod +x node_modules/.bin/*",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
