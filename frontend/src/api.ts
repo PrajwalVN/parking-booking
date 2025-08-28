@@ -1,4 +1,4 @@
-const API_BASE = 'https://parking-booking.onrender.com/api';
+const API_BASE = '/api';
 
 export async function fetchSlots() {
   const res = await fetch(`${API_BASE}/slots`);
