@@ -3,14 +3,4 @@
   "outputDirectory": "dist",
   "framework": null,
   "installCommand": "npm install && chmod +x node_modules/.bin/*"
-  "routes": [
-    {
-      "src": "/admin",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
 }
