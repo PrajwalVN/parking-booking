@@ -5,6 +5,10 @@
   "installCommand": "npm install && chmod +x node_modules/.bin/*",
   "rewrites": [
     {
+      "source": "/api/(.*)",
+      "destination": "https://parking-booking.onrender.com/api/$1"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
