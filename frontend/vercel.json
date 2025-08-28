@@ -3,10 +3,14 @@
   "outputDirectory": "dist",
   "framework": null,
   "installCommand": "npm install && chmod +x node_modules/.bin/*"
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/admin",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
