@@ -1,0 +1,38 @@
+/* SlotGrid.css */
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.slot-item {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.slot-empty {
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.slot-empty:hover {
+  background: #f0f0f0;
+}
+
+.slot-booked {
+  background: #9e9e9e;
+  cursor: not-allowed;
+  color: white;
+}
+
+.slot-occupied {
+  background: #f44336;
+  cursor: not-allowed;
+  color: white;
+}

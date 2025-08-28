@@ -1,0 +1,292 @@
+/* Home.css - Dark Theme with Grey/Green Colors */
+
+/* Base styles - Mobile First */
+.home-container {
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  background-color: #1a202c;
+  min-height: 100vh;
+  color: #e2e8f0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.home-container h1 {
+  margin: 0;
+  color: #f7fafc;
+  font-size: 22px;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+/* ---------- LEGEND ---------- */
+.legend-container {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px;
+  background: #2d3748;
+  border-radius: 8px;
+  border: 1px solid #4a5568;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.legend-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  color: #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.legend-item:hover {
+  background: rgba(72, 187, 120, 0.1);
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #4a5568;
+  border-radius: 3px;
+  transition: border-color 0.2s ease;
+}
+
+.legend-item:hover .legend-color {
+  border-color: #68d391;
+}
+
+.legend-empty {
+  background: #2d3748;
+  border-color: #68d391 !important;
+}
+
+.legend-booked {
+  background: #718096;
+  border-color: #a0aec0 !important;
+}
+
+.legend-occupied {
+  background: #e53e3e;
+  border-color: #fc8181 !important;
+}
+
+/* ---------- REFRESH BUTTON ---------- */
+.refresh-button {
+  padding: 8px 16px;
+  border: 2px solid #48bb78;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(72, 187, 120, 0.2);
+}
+
+.refresh-button:hover {
+  background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+  border-color: #68d391;
+}
+
+.refresh-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(72, 187, 120, 0.2);
+}
+
+/* ---------- MESSAGES ---------- */
+.error-message {
+  color: #fc8181;
+  font-size: 14px;
+  background: #2d1b1b;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #e53e3e;
+  word-wrap: break-word;
+  box-shadow: 0 2px 4px rgba(229, 62, 62, 0.1);
+}
+
+.loading-message {
+  color: #a0aec0;
+  font-size: 14px;
+  background: #2d3748;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid #4a5568;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  word-wrap: break-word;
+}
+
+/* Loading animation */
+.loading-message::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 2px solid #4a5568;
+  border-top-color: #68d391;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- TABLET STYLES ---------- */
+@media (min-width: 768px) {
+  .home-container {
+    padding: 32px 40px;
+  }
+
+  .home-container h1 {
+    font-size: 26px;
+  }
+
+  .legend-container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .legend-item {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  .legend-color {
+    width: 18px;
+    height: 18px;
+  }
+
+  .refresh-button {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+
+  .error-message,
+  .loading-message {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+}
+
+/* ---------- LAPTOP/DESKTOP STYLES ---------- */
+@media (min-width: 1024px) {
+  .home-container {
+    padding: 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .home-container h1 {
+    font-size: 30px;
+  }
+
+  .legend-container {
+    padding: 24px;
+    gap: 24px;
+    border-radius: 10px;
+  }
+
+  .legend-item {
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+  }
+
+  .legend-item:hover {
+    background: rgba(72, 187, 120, 0.15);
+    transform: translateY(-1px);
+  }
+
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+  }
+
+  .refresh-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .refresh-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+  }
+
+  .error-message,
+  .loading-message {
+    font-size: 16px;
+    padding: 16px 20px;
+    border-radius: 8px;
+  }
+}
+
+/* ---------- LARGE DESKTOP STYLES ---------- */
+@media (min-width: 1440px) {
+  .home-container {
+    padding: 50px 80px;
+  }
+
+  .home-container h1 {
+    font-size: 34px;
+  }
+
+  .legend-container {
+    padding: 28px;
+  }
+
+  .refresh-button:hover {
+    box-shadow: 0 8px 25px rgba(72, 187, 120, 0.5);
+  }
+}
+
+/* ---------- DARK THEME ENHANCEMENTS ---------- */
+/* Custom selection colors */
+::selection {
+  background: rgba(72, 187, 120, 0.3);
+  color: #f7fafc;
+}
+
+/* Focus states for accessibility */
+.refresh-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.4);
+}
+
+/* Smooth transitions for theme consistency */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a202c;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", sans-serif;
+  line-height: 1.5;
+}
+
+.slot-empty {
+  background-color: #2d3748;
+  border: 2px solid #48bb78;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
